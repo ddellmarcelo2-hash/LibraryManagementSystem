@@ -33,17 +33,36 @@ public class LibrarianDashboard extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        Managefines = new javax.swing.JButton();
+        Activitylogs = new javax.swing.JButton();
+        Profilesetting = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Bookissuesandreturn = new javax.swing.JButton();
+        Searchandlookup = new javax.swing.JButton();
+        Timeattendance = new javax.swing.JButton();
+        Realtimestatus = new javax.swing.JButton();
         parent = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
+        ManageFines = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        ActivityLogs = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        ProfileSettinng = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        BookIssuesandReturn = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
+        SearchandLookup = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable5 = new javax.swing.JTable();
+        TimeAttendancep = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable6 = new javax.swing.JTable();
+        RealTimeStatus = new javax.swing.JPanel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTable7 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,22 +75,32 @@ public class LibrarianDashboard extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("for logo");
 
-        jButton5.setBackground(new java.awt.Color(168, 124, 124));
-        jButton5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton5.setText("Manage Fines");
-
-        jButton6.setBackground(new java.awt.Color(168, 124, 124));
-        jButton6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton6.setText("Activity Logs");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        Managefines.setBackground(new java.awt.Color(168, 124, 124));
+        Managefines.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        Managefines.setText("Manage Fines");
+        Managefines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                ManagefinesActionPerformed(evt);
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(168, 124, 124));
-        jButton7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton7.setText("Profile Setting");
+        Activitylogs.setBackground(new java.awt.Color(168, 124, 124));
+        Activitylogs.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        Activitylogs.setText("Activity Logs");
+        Activitylogs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ActivitylogsActionPerformed(evt);
+            }
+        });
+
+        Profilesetting.setBackground(new java.awt.Color(168, 124, 124));
+        Profilesetting.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        Profilesetting.setText("Profile Setting");
+        Profilesetting.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProfilesettingActionPerformed(evt);
+            }
+        });
 
         jButton8.setBackground(new java.awt.Color(168, 124, 124));
         jButton8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
@@ -90,10 +119,10 @@ public class LibrarianDashboard extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Managefines, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jSeparator1)
-                            .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Activitylogs, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Profilesetting, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
@@ -104,60 +133,250 @@ public class LibrarianDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(Managefines, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(Activitylogs, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(Profilesetting, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
 
-        jButton1.setBackground(new java.awt.Color(168, 124, 124));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jButton1.setText("Book Issues & Return");
+        Bookissuesandreturn.setBackground(new java.awt.Color(168, 124, 124));
+        Bookissuesandreturn.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        Bookissuesandreturn.setText("Book Issues & Return");
+        Bookissuesandreturn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BookissuesandreturnActionPerformed(evt);
+            }
+        });
 
-        jButton2.setBackground(new java.awt.Color(168, 124, 124));
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton2.setText("Search and Lookup");
+        Searchandlookup.setBackground(new java.awt.Color(168, 124, 124));
+        Searchandlookup.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        Searchandlookup.setText("Search and Lookup");
+        Searchandlookup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchandlookupActionPerformed(evt);
+            }
+        });
 
-        jButton3.setBackground(new java.awt.Color(168, 124, 124));
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton3.setText("Time Attendance");
+        Timeattendance.setBackground(new java.awt.Color(168, 124, 124));
+        Timeattendance.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        Timeattendance.setText("Time Attendance");
+        Timeattendance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TimeattendanceActionPerformed(evt);
+            }
+        });
 
-        jButton4.setBackground(new java.awt.Color(168, 124, 124));
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton4.setText("Real-Time Status");
+        Realtimestatus.setBackground(new java.awt.Color(168, 124, 124));
+        Realtimestatus.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        Realtimestatus.setText("Real-Time Status");
+        Realtimestatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RealtimestatusActionPerformed(evt);
+            }
+        });
 
         parent.setLayout(new java.awt.CardLayout());
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
+        ManageFines.setBackground(new java.awt.Color(51, 255, 255));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        javax.swing.GroupLayout ManageFinesLayout = new javax.swing.GroupLayout(ManageFines);
+        ManageFines.setLayout(ManageFinesLayout);
+        ManageFinesLayout.setHorizontalGroup(
+            ManageFinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 904, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 358, Short.MAX_VALUE)
+        ManageFinesLayout.setVerticalGroup(
+            ManageFinesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
         );
 
-        parent.add(jPanel3, "card2");
+        parent.add(ManageFines, "card2");
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
+        ActivityLogs.setBackground(new java.awt.Color(255, 102, 102));
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        javax.swing.GroupLayout ActivityLogsLayout = new javax.swing.GroupLayout(ActivityLogs);
+        ActivityLogs.setLayout(ActivityLogsLayout);
+        ActivityLogsLayout.setHorizontalGroup(
+            ActivityLogsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 904, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 358, Short.MAX_VALUE)
+        ActivityLogsLayout.setVerticalGroup(
+            ActivityLogsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
         );
 
-        parent.add(jPanel4, "card3");
+        parent.add(ActivityLogs, "card3");
+
+        ProfileSettinng.setBackground(new java.awt.Color(153, 153, 255));
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        javax.swing.GroupLayout ProfileSettinngLayout = new javax.swing.GroupLayout(ProfileSettinng);
+        ProfileSettinng.setLayout(ProfileSettinngLayout);
+        ProfileSettinngLayout.setHorizontalGroup(
+            ProfileSettinngLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 904, Short.MAX_VALUE)
+        );
+        ProfileSettinngLayout.setVerticalGroup(
+            ProfileSettinngLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
+        );
+
+        parent.add(ProfileSettinng, "card4");
+
+        BookIssuesandReturn.setBackground(new java.awt.Color(204, 204, 255));
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane4.setViewportView(jTable4);
+
+        javax.swing.GroupLayout BookIssuesandReturnLayout = new javax.swing.GroupLayout(BookIssuesandReturn);
+        BookIssuesandReturn.setLayout(BookIssuesandReturnLayout);
+        BookIssuesandReturnLayout.setHorizontalGroup(
+            BookIssuesandReturnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 904, Short.MAX_VALUE)
+        );
+        BookIssuesandReturnLayout.setVerticalGroup(
+            BookIssuesandReturnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
+        );
+
+        parent.add(BookIssuesandReturn, "card5");
+
+        SearchandLookup.setBackground(new java.awt.Color(51, 51, 255));
+
+        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane5.setViewportView(jTable5);
+
+        javax.swing.GroupLayout SearchandLookupLayout = new javax.swing.GroupLayout(SearchandLookup);
+        SearchandLookup.setLayout(SearchandLookupLayout);
+        SearchandLookupLayout.setHorizontalGroup(
+            SearchandLookupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 904, Short.MAX_VALUE)
+        );
+        SearchandLookupLayout.setVerticalGroup(
+            SearchandLookupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
+        );
+
+        parent.add(SearchandLookup, "card6");
+
+        TimeAttendancep.setBackground(new java.awt.Color(102, 255, 102));
+
+        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane6.setViewportView(jTable6);
+
+        javax.swing.GroupLayout TimeAttendancepLayout = new javax.swing.GroupLayout(TimeAttendancep);
+        TimeAttendancep.setLayout(TimeAttendancepLayout);
+        TimeAttendancepLayout.setHorizontalGroup(
+            TimeAttendancepLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 904, Short.MAX_VALUE)
+        );
+        TimeAttendancepLayout.setVerticalGroup(
+            TimeAttendancepLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
+        );
+
+        parent.add(TimeAttendancep, "card7");
+
+        RealTimeStatus.setBackground(new java.awt.Color(255, 255, 0));
+
+        jTable7.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane7.setViewportView(jTable7);
+
+        javax.swing.GroupLayout RealTimeStatusLayout = new javax.swing.GroupLayout(RealTimeStatus);
+        RealTimeStatus.setLayout(RealTimeStatusLayout);
+        RealTimeStatusLayout.setHorizontalGroup(
+            RealTimeStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 904, Short.MAX_VALUE)
+        );
+        RealTimeStatusLayout.setVerticalGroup(
+            RealTimeStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
+        );
+
+        parent.add(RealTimeStatus, "card8");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -167,19 +386,19 @@ public class LibrarianDashboard extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(parent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(Bookissuesandreturn, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(Searchandlookup, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(Timeattendance, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(Realtimestatus, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,10 +406,10 @@ public class LibrarianDashboard extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Bookissuesandreturn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Searchandlookup, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Timeattendance, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Realtimestatus, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(parent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -210,9 +429,54 @@ public class LibrarianDashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void ActivitylogsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActivitylogsActionPerformed
+        parent.removeAll();
+        parent.add(ActivityLogs);
+        parent.repaint();
+        parent.revalidate();
+    }//GEN-LAST:event_ActivitylogsActionPerformed
+
+    private void ProfilesettingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProfilesettingActionPerformed
+        parent.removeAll();
+        parent.add(ProfileSettinng);
+        parent.repaint();
+        parent.revalidate();
+    }//GEN-LAST:event_ProfilesettingActionPerformed
+
+    private void ManagefinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManagefinesActionPerformed
+        parent.removeAll();
+        parent.add(ManageFines);
+        parent.repaint();
+        parent.revalidate();
+    }//GEN-LAST:event_ManagefinesActionPerformed
+
+    private void BookissuesandreturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BookissuesandreturnActionPerformed
+        parent.removeAll();
+        parent.add(BookIssuesandReturn);
+        parent.repaint();
+        parent.revalidate();
+    }//GEN-LAST:event_BookissuesandreturnActionPerformed
+
+    private void RealtimestatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RealtimestatusActionPerformed
+        parent.removeAll();
+        parent.add(RealTimeStatus);
+        parent.repaint();
+        parent.revalidate();
+    }//GEN-LAST:event_RealtimestatusActionPerformed
+
+    private void TimeattendanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TimeattendanceActionPerformed
+        parent.removeAll();
+        parent.add(TimeAttendancep);
+        parent.repaint();
+        parent.revalidate();
+    }//GEN-LAST:event_TimeattendanceActionPerformed
+
+    private void SearchandlookupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchandlookupActionPerformed
+        parent.removeAll();
+        parent.add(SearchandLookup);
+        parent.repaint();
+        parent.revalidate();
+    }//GEN-LAST:event_SearchandlookupActionPerformed
 
     /**
      * @param args the command line arguments
@@ -250,20 +514,39 @@ public class LibrarianDashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JPanel ActivityLogs;
+    private javax.swing.JButton Activitylogs;
+    private javax.swing.JPanel BookIssuesandReturn;
+    private javax.swing.JButton Bookissuesandreturn;
+    private javax.swing.JPanel ManageFines;
+    private javax.swing.JButton Managefines;
+    private javax.swing.JPanel ProfileSettinng;
+    private javax.swing.JButton Profilesetting;
+    private javax.swing.JPanel RealTimeStatus;
+    private javax.swing.JButton Realtimestatus;
+    private javax.swing.JPanel SearchandLookup;
+    private javax.swing.JButton Searchandlookup;
+    private javax.swing.JPanel TimeAttendancep;
+    private javax.swing.JButton Timeattendance;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
+    private javax.swing.JTable jTable5;
+    private javax.swing.JTable jTable6;
+    private javax.swing.JTable jTable7;
     private javax.swing.JPanel parent;
     // End of variables declaration//GEN-END:variables
 }
