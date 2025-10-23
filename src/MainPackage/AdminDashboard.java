@@ -151,6 +151,11 @@ public class AdminDashboard extends javax.swing.JFrame {
         });
 
         jButton7.setText("LOGOUT");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton14.setText("DASHBOARD");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -937,6 +942,10 @@ public class AdminDashboard extends javax.swing.JFrame {
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
