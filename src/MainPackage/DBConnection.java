@@ -22,5 +22,23 @@ public class DBConnection {
         }
         return conn;
     }
-    
+  
+    public boolean verifyLogin (String username, String password){
+        String query = "SELECT + FROM users WHERE username = ? AND password = ?";
+        
+        try (Connection conn = DriverManager.getConnection(query);
+          PreparedStatement pstmt = conn.prepareStatement(query)){
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+            
+            ResultSet rs = pstmt.executeQuery();
+            
+            return rs.next();
+            
+        }catch(SQLException e){
+            System.out.println("Login Failed: " + e.getMessage());
+            return false;
+        }
+    }
 }
+
