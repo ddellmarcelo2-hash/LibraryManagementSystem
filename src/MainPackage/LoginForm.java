@@ -4,8 +4,6 @@
  */
 package MainPackage;
 import javax.swing.JOptionPane;
-import MainPackage.AdminDashboard;
-import MainPackage.LibrarianDashboard;
 
 public class LoginForm extends javax.swing.JFrame {
 
@@ -14,6 +12,7 @@ public class LoginForm extends javax.swing.JFrame {
      */
     public LoginForm() {
         initComponents();
+        new DBConnection().connect();
         getRootPane().setDefaultButton(jButton1);
         setLocationRelativeTo(null); 
     }
@@ -35,13 +34,10 @@ public class LoginForm extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        comboUserType = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         txtPassword = new javax.swing.JPasswordField();
         txtUsername = new javax.swing.JTextField();
@@ -51,7 +47,6 @@ public class LoginForm extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(799, 598));
 
         jPanel2.setBackground(new java.awt.Color(62, 50, 50));
 
@@ -86,10 +81,7 @@ public class LoginForm extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Welcome to your Account!");
-
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MainPackage/user (2).png"))); // NOI18N
+        jLabel5.setText("Welcome to E-Library!");
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MainPackage/user (4).png"))); // NOI18N
@@ -102,13 +94,6 @@ public class LoginForm extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setText("PASSWORD");
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel11.setText("USERTYPE");
-
-        comboUserType.setBackground(new java.awt.Color(168, 124, 124));
-        comboUserType.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        comboUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Librarian", " " }));
 
         jButton1.setBackground(new java.awt.Color(62, 50, 50));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -147,15 +132,11 @@ public class LoginForm extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7))
+                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(txtPassword, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(comboUserType, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -179,7 +160,7 @@ public class LoginForm extends javax.swing.JFrame {
                 .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
+                        .addGap(100, 100, 100)
                         .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(8, 8, 8)
                         .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -195,16 +176,7 @@ public class LoginForm extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel8)))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(comboUserType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel7)))
-                .addGap(50, 50, 50)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(427, 427, 427))
         );
@@ -248,39 +220,22 @@ public class LoginForm extends javax.swing.JFrame {
                  
     String username = txtUsername.getText().trim();
     String password = new String(txtPassword.getPassword()).trim();
-    String userType = comboUserType.getSelectedItem() != null 
-            ? comboUserType.getSelectedItem().toString()
-            : "";
-
-    if (username.isEmpty() || password.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Please fill in all fields!");
-        return;
+    
+    
+    if (username.equals("Admin")&& password.equals("admin123")){
+        JOptionPane.showMessageDialog(this, "Welcome, Admin");
+        AdminDashboard Admin = new AdminDashboard();
+        Admin.setVisible(true);
+        this.dispose();
     }
-
-    if (userType.equalsIgnoreCase("Admin")) {
-        if (username.equals("admin") && password.equals("admin123")) {
-            JOptionPane.showMessageDialog(this, "Welcome, Admin!");
-
-            AdminDashboard admin = new AdminDashboard();
-            admin.setVisible(true);
-            this.dispose();
-        } else {
-            JOptionPane.showMessageDialog(this, "Invalid Admin credentials!");
-        }
-    } 
-    else if (userType.equalsIgnoreCase("Librarian")) {
-        if (username.equals("librarian") && password.equals("librarian123")) {
-            JOptionPane.showMessageDialog(this, "Welcome, Librarian!");
-
-            LibrarianDashboard lib = new LibrarianDashboard();
-            lib.setVisible(true);
-            this.dispose();
-        } else {
-            JOptionPane.showMessageDialog(this, "Invalid Librarian credentials!");
-        }
-    } 
-    else {
-        JOptionPane.showMessageDialog(this, "Please select a user type!");
+    else if (username.equals("Librarian")&& password.equals("librarian123")){
+        JOptionPane.showMessageDialog(this, "Welcome, Librarian");
+        LibrarianDashboard Lib = new LibrarianDashboard();
+        Lib.setVisible(true);
+        this.dispose();
+    }
+    else{
+        JOptionPane.showMessageDialog(this, "Invalid credentials!");
     }
     
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -329,17 +284,14 @@ public class LoginForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> comboUserType;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
