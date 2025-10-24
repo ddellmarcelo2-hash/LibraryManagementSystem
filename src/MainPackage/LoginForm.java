@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package MainPackage;
-import javax.swing.JOptionPane;
 
 public class LoginForm extends javax.swing.JFrame {
 
@@ -12,7 +11,6 @@ public class LoginForm extends javax.swing.JFrame {
      */
     public LoginForm() {
         initComponents();
-        new DBConnection().connect();
         getRootPane().setDefaultButton(jButton1);
         setLocationRelativeTo(null); 
     }
@@ -218,26 +216,11 @@ public class LoginForm extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
                  
-    String username = txtUsername.getText().trim();
-    String password = new String(txtPassword.getPassword()).trim();
+    String username = txtUsername.getText();
+    String password = txtPassword.getText();
     
     
-    if (username.equals("Admin")&& password.equals("admin123")){
-        JOptionPane.showMessageDialog(this, "Welcome, Admin");
-        AdminDashboard Admin = new AdminDashboard();
-        Admin.setVisible(true);
-        this.dispose();
-    }
-    else if (username.equals("Librarian")&& password.equals("librarian123")){
-        JOptionPane.showMessageDialog(this, "Welcome, Librarian");
-        LibrarianDashboard Lib = new LibrarianDashboard();
-        Lib.setVisible(true);
-        this.dispose();
-    }
-    else{
-        JOptionPane.showMessageDialog(this, "Invalid credentials!");
-    }
-    
+    new DBConnection().login(username, password);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
